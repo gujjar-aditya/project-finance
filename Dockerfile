@@ -1,5 +1,4 @@
-FROM openjdk:11         
-WORKDIR /app                         
+FROM openjdk:11                                 
 COPY target/*.jar app.jar   
 ENTRYPOINT ["java", "-jar", "/app.jar"]  
 LABEL maintainer="GujjarAditya"        
