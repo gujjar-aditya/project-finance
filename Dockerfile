@@ -1,5 +1,5 @@
-FROM openjdk:11-jre-slim                
+FROM openjdk:11         
 WORKDIR /app                         
 COPY target/*.jar app.jar   
-ENTRYPOINT ["java", "-jar", "app.jar"]  
-LABEL maintainer="Gujjar Aditya"        
+ENTRYPOINT ["java", "-jar", "/app.jar"]  
+LABEL maintainer="GujjarAditya"        
