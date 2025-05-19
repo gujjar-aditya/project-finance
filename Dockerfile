@@ -1,4 +1,5 @@
-FROM openjdk:11
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+FROM openjdk:11-jre-slim                
+WORKDIR /app                         
+COPY target/*.jar app.jar   
+ENTRYPOINT ["java", "-jar", "app.jar"]  
+LABEL maintainer="Gujjar Aditya"        
