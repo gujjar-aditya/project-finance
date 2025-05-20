@@ -1,6 +1,6 @@
 ---
 - name: Deploy on Docker server
-  hosts: docker-server
+  hosts: docker_server
   become: true
   tasks:
     - name: Stop and remove existing container
@@ -15,7 +15,7 @@
         name: adityagujjar/project-finance:V1.0
         state: absent
         force: true
-      ignore_erros: yes
+      ignore_errors: yes
 
     - name: Create new container
       docker_container:
