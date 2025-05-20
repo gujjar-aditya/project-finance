@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: finance-cont
-          image: adityagujjar/project-finance:V1.0
+          image: adityagujjar/project-finance:V1.1
           imagePullPolicy: Always
           ports:
             - containerPort: 8081                           
